@@ -11,7 +11,9 @@ def flow():
         print("\n Press 1 to add password")
         print(" Press 2 to view password for a specific website")
         print(" Press 3 to view all the passwords you have saved")
-        print(" Press 4 to Exit")
+        print(" Press 4 to Remove Password")
+        print(" Press 5 to Exit")
+
 
         answer = input("\n")
         if answer == "1":
@@ -24,6 +26,9 @@ def flow():
             view_all_passwords()
 
         elif answer == "4":
+            remove_password()
+
+        elif answer == "5":
             print("Goodbye!")
             break
         else:
