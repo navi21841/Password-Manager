@@ -46,7 +46,7 @@ def view_password_for_website():
     for item in view_files():
 
         if item["Website"] == password_for_website:
-            print(item["Password"])
+            print(f"Your password for the website {password_for_website} is {item["Password"]}")
 
 def view_all_passwords():
     for item in view_files():
