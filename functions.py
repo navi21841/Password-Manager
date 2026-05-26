@@ -1,6 +1,11 @@
 import os
 import json
 
+def view_files():
+    with open("passwords.txt", "r") as f:
+        contents = json.load(f)
+        return contents
+
 def add_password():
     while(True):
 
@@ -36,4 +41,16 @@ def add_password():
         else:
             print("Please enter y or n only")
 
-add_password()
+def view_password_for_website():
+    password_for_website = input("Which website password you want: ")
+    for item in view_files():
+
+        if item["Website"] == password_for_website:
+            print(item["Password"])
+
+def view_all_passwords():
+    for item in view_files():
+        for key, value in item.items():
+            print(key, ":", value)
+        print()
+
